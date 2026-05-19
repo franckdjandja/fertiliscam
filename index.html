@@ -941,6 +941,15 @@ footer {
   .port-ops-row { grid-template-columns: 1fr }
   .basis-row { grid-template-columns: 1fr 1fr }
 }
+
+/* Clean 5-column table */
+.col-indicator { min-width: 210px }
+.col-sub { font-weight: 300; opacity: .55; font-size: .78rem }
+.tax-rate { font-size: .72rem; opacity: .5 }
+.ftable thead th { text-align: right }
+.ftable thead th:first-child { text-align: left }
+.ftable tbody td:not(:first-child) { text-align: right; font-family: 'DM Mono', monospace; font-size: .82rem }
+.ftable tbody td:first-child { text-align: left }
 </style>
 </head>
 <body class="en">
@@ -1420,83 +1429,77 @@ footer {
       <table class="ftable">
         <thead>
           <tr>
-            <th data-fr>Indicateur</th>
-            <th data-en>Indicator</th>
-            <th data-fr>Pilote<br><span style="font-weight:300;opacity:.6">100 t</span></th>
-            <th data-en>Pilot<br><span style="font-weight:300;opacity:.6">100 t</span></th>
-            <th data-fr>Année 1<br><span style="font-weight:300;opacity:.6">2 000 t</span></th>
-            <th data-en>Year 1<br><span style="font-weight:300;opacity:.6">2,000 t</span></th>
-            <th data-fr>Année 2<br><span style="font-weight:300;opacity:.6">3 500 t</span></th>
-            <th data-en>Year 2<br><span style="font-weight:300;opacity:.6">3,500 t</span></th>
-            <th data-fr>Année 3<br><span style="font-weight:300;opacity:.6">5 000 t</span></th>
-            <th data-en>Year 3<br><span style="font-weight:300;opacity:.6">5,000 t</span></th>
+            <th class="col-indicator"><span data-fr>Indicateur</span><span data-en>Indicator</span></th>
+            <th><span data-fr>Pilote</span><span data-en>Pilot</span><br><span class="col-sub" data-fr>100 t</span><span class="col-sub" data-en>100 t</span></th>
+            <th><span data-fr>Année 1</span><span data-en>Year 1</span><br><span class="col-sub" data-fr>2 000 t</span><span class="col-sub" data-en>2,000 t</span></th>
+            <th><span data-fr>Année 2</span><span data-en>Year 2</span><br><span class="col-sub" data-fr>3 500 t</span><span class="col-sub" data-en>3,500 t</span></th>
+            <th><span data-fr>Année 3</span><span data-en>Year 3</span><br><span class="col-sub" data-fr>5 000 t</span><span class="col-sub" data-en>5,000 t</span></th>
           </tr>
         </thead>
         <tbody>
           <tr class="row-hi">
-            <td data-fr>Chiffre d'affaires</td><td data-en>Revenue</td>
-            <td>$58,000</td><td>$58,000</td>
-            <td>$1,160,000</td><td>$1,160,000</td>
-            <td>$2,030,000</td><td>$2,030,000</td>
-            <td>$2,900,000</td><td>$2,900,000</td>
+            <td><span data-fr>Chiffre d'affaires</span><span data-en>Revenue</span></td>
+            <td>$58,000</td>
+            <td>$1,160,000</td>
+            <td>$2,030,000</td>
+            <td>$2,900,000</td>
           </tr>
           <tr class="row-sub">
-            <td data-fr>Coût d'achat total (COGS)</td><td data-en>Cost of goods (COGS)</td>
-            <td>$43,500</td><td>$43,500</td>
-            <td>$870,000</td><td>$870,000</td>
-            <td>$1,522,500</td><td>$1,522,500</td>
-            <td>$2,175,000</td><td>$2,175,000</td>
+            <td><span data-fr>Coût d'achat (COGS)</span><span data-en>Cost of goods (COGS)</span></td>
+            <td>$43,500</td>
+            <td>$870,000</td>
+            <td>$1,522,500</td>
+            <td>$2,175,000</td>
           </tr>
           <tr class="row-hi">
-            <td data-fr>Marge brute (25%)</td><td data-en>Gross margin (25%)</td>
-            <td>$14,500</td><td>$14,500</td>
-            <td>$290,000</td><td>$290,000</td>
-            <td>$507,500</td><td>$507,500</td>
-            <td>$725,000</td><td>$725,000</td>
+            <td><span data-fr>Marge brute (25%)</span><span data-en>Gross margin (25%)</span></td>
+            <td>$14,500</td>
+            <td>$290,000</td>
+            <td>$507,500</td>
+            <td>$725,000</td>
           </tr>
           <tr class="row-sub">
-            <td data-fr>Coûts opérationnels (OPEX)</td><td data-en>Operating costs (OPEX)</td>
-            <td>$25,000</td><td>$25,000</td>
-            <td>$195,000</td><td>$195,000</td>
-            <td>$265,000</td><td>$265,000</td>
-            <td>$320,000</td><td>$320,000</td>
+            <td><span data-fr>Coûts opérationnels (OPEX)</span><span data-en>Operating costs (OPEX)</span></td>
+            <td>$25,000</td>
+            <td>$195,000</td>
+            <td>$265,000</td>
+            <td>$320,000</td>
           </tr>
           <tr>
-            <td data-fr>Résultat avant impôt (EBITDA)</td><td data-en>Pre-tax profit (EBITDA)</td>
-            <td class="neg">−$10,500</td><td class="neg">−$10,500</td>
-            <td>$95,000</td><td>$95,000</td>
-            <td>$242,500</td><td>$242,500</td>
-            <td>$405,000</td><td>$405,000</td>
+            <td><span data-fr>Résultat avant impôt (EBITDA)</span><span data-en>Pre-tax profit (EBITDA)</span></td>
+            <td class="neg">−$10,500</td>
+            <td>$95,000</td>
+            <td>$242,500</td>
+            <td>$405,000</td>
           </tr>
           <tr class="row-sub">
-            <td data-fr>Impôt sur les sociétés</td><td data-en>Corporate income tax</td>
-            <td class="neg" data-fr>—</td><td class="neg" data-en>—</td>
-            <td>$28,500 <span style="font-size:.72rem;opacity:.5">(30%)</span></td>
-            <td>$28,500 <span style="font-size:.72rem;opacity:.5">(30%)</span></td>
-            <td>$67,900 <span style="font-size:.72rem;opacity:.5">(28%)</span></td>
-            <td>$67,900 <span style="font-size:.72rem;opacity:.5">(28%)</span></td>
-            <td>$101,250 <span style="font-size:.72rem;opacity:.5">(25%)</span></td>
-            <td>$101,250 <span style="font-size:.72rem;opacity:.5">(25%)</span></td>
+            <td><span data-fr>Impôt sur les sociétés</span><span data-en>Corporate income tax</span></td>
+            <td class="neg">—</td>
+            <td>$28,500 <span class="tax-rate">(30%)</span></td>
+            <td>$67,900 <span class="tax-rate">(28%)</span></td>
+            <td>$101,250 <span class="tax-rate">(25%)</span></td>
           </tr>
           <tr class="row-total">
-            <td data-fr>Bénéfice net</td><td data-en>Net profit</td>
-            <td data-fr class="neg">Validation</td><td data-en class="neg">Validation</td>
-            <td>$66,500</td><td>$66,500</td>
-            <td>$174,600</td><td>$174,600</td>
-            <td>$303,750</td><td>$303,750</td>
+            <td><span data-fr>Bénéfice net</span><span data-en>Net profit</span></td>
+            <td class="neg"><span data-fr>Validation</span><span data-en>Validation</span></td>
+            <td>$66,500</td>
+            <td>$174,600</td>
+            <td>$303,750</td>
           </tr>
           <tr class="row-total">
-            <td data-fr>Marge nette</td><td data-en>Net margin</td>
-            <td>—</td><td>—</td>
-            <td>5.7%</td><td>5.7%</td>
-            <td>8.6%</td><td>8.6%</td>
-            <td>10.5%</td><td>10.5%</td>
+            <td><span data-fr>Marge nette</span><span data-en>Net margin</span></td>
+            <td>—</td>
+            <td>5.7%</td>
+            <td>8.6%</td>
+            <td>10.5%</td>
           </tr>
         </tbody>
         <tfoot>
           <tr>
-            <td colspan="9" data-fr>Base de calcul : FOB $350/t · Transport $85/t · Prix de vente $580/t · IS Cameroun 30%→25% (Code des Investissements)</td>
-            <td colspan="9" data-en>Basis: FOB $350/t · Shipping $85/t · Selling price $580/t · Cameroon corporate tax 30%→25% (Investment Code)</td>
+            <td colspan="5">
+              <span data-fr>Base de calcul : FOB $350/t · Transport $85/t · Prix de vente $580/t · IS Cameroun 30%→25% (Code des Investissements)</span>
+              <span data-en>Basis: FOB $350/t · Shipping $85/t · Selling price $580/t · Cameroon corporate tax 30%→25% (Investment Code)</span>
+            </td>
           </tr>
         </tfoot>
       </table>
@@ -1561,7 +1564,7 @@ footer {
         <h2 class="rv" data-en>The right person,<br>in the right place,<br>with the right connections.</h2>
         <div class="rule rv"></div>
         <ul class="assets rv d1">
-          <li class="asset-row"><div class="asset-icon">🌍</div><div><div class="asset-h" data-fr>Logistique Panafricaine — Aurrica Ltd</div><div class="asset-h" data-en>Pan-African Logistics — Aurrica Ltd</div><p class="asset-p" data-fr>Country Director dans 15+ pays africains. Corridors de fret transfrontaliers. Maîtrise des opérations logistiques à l'échelle du continent.</p><p class="asset-p" data-en>Country Director across 15+ African countries. Cross-border freight corridors. Continental-scale logistics operations expertise.</p></div></li>
+          <li class="asset-row"><div class="asset-icon">🌍</div><div><div class="asset-h" data-fr>Logistique Régionale — Aurrica Ltd</div><div class="asset-h" data-en>Regional Logistics — Aurrica Ltd</div><p class="asset-p" data-fr>Country Director au Cameroun et au Rwanda chez Aurrica Ltd. Supervise les opérations dans 13 pays africains où les solutions sont déployées. Corridors de fret transfrontaliers à l'échelle régionale.</p><p class="asset-p" data-en>Country Director for Cameroon and Rwanda at Aurrica Ltd. Oversees operations across 13 African countries where solutions are deployed. Regional cross-border freight corridors.</p></div></li>
           <li class="asset-row"><div class="asset-icon">🌱</div><div><div class="asset-h" data-fr>7 Ans d'Agriculture au Cameroun</div><div class="asset-h" data-en>7 Years Farming in Cameroon</div><p class="asset-p" data-fr>Exploitant maraîcher personnel — cucumbers, tomates, haricots. Il connaît les besoins des agriculteurs de l'intérieur.</p><p class="asset-p" data-en>Personal market farm operator — cucumbers, tomatoes, beans. He understands farmers' real needs from the inside.</p></div></li>
           <li class="asset-row"><div class="asset-icon">📊</div><div><div class="asset-h" data-fr>Ingénieur Télécoms &amp; Analyste Data</div><div class="asset-h" data-en>Telecom Engineer &amp; Data Analyst</div><p class="asset-p" data-fr>Décisions pilotées par la donnée. Scoring clients. Intelligence commerciale opérationnelle.</p><p class="asset-p" data-en>Data-driven decisions. Client scoring. Operational business intelligence.</p></div></li>
           <li class="asset-row"><div class="asset-icon">🤝</div><div><div class="asset-h" data-fr>Réseau Coopératives &amp; MINADER</div><div class="asset-h" data-en>Cooperative Network &amp; MINADER</div><p class="asset-p" data-fr>Son père est leader reconnu des coopératives agricoles camerounaises. MINADER = accès direct au registre des grands exploitants.</p><p class="asset-p" data-en>His father is a recognized leader of Cameroonian agricultural cooperatives. MINADER = direct access to the large farm operator registry.</p></div></li>
